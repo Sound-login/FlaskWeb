@@ -63,7 +63,7 @@ def regist():
 @app.route('/logout')
 def logout():
 
-    return render_template('test.html')
+    return render_template('logout.html')
 
 
 @socketio.on('message')
@@ -89,17 +89,7 @@ def send(json, methods=['GET', 'POST']):
 
     f.close()  
 
-    # if(cmp('loginInfo1.txt','appSoundInfo1.txt') == True):       
-    #      str = 'success'
-    #      print('로그인 성공 '+str)
-    #      socketio.emit('result', {'str':str})
-    #      return redirect('http://172.30.1.21:5000/main')
-         
-    # else:
-    #     str = 'fail'
-    #     print('로그인 실패 '+str)
-    #     socketio.emit('result', {'str':str})
-    #     return render_template('SoundLogin.html')
+  
 
 @socketio.on('send_sound')
 def sendUSER(json, methods=['GET', 'POST']):
